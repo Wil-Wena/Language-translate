@@ -6,7 +6,7 @@ def trans():
     user_statement =input('Type the statement you want to translate: ')
     print()
     langauge_type = input('Which language will you like to translate it to? ')
-    m = langauge_type.lower()
+    m = langauge_type.lower() #Converts the user selection to lowercase letters
     if m == 'french':
         translator = Translator(to_lang="french")
         trans = translator.translate(user_statement)
@@ -29,7 +29,7 @@ def trans():
         translator = Translator(to_lang="portugese")
         trans = translator.translate(user_statement)
     elif m == 'english':
-        translator = Translator(from_lang="spanish", to_lang="english")
+        translator = Translator(from_lang="spanish", to_lang="english") #Translate from spanish to english if the user input is spanish. 
         trans = translator.translate(user_statement)
     else:
         print('Cannot translate your statement into the given language')
